@@ -24,7 +24,11 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ShiftCrew – The Professional Network for Restaurant Workers",
+  metadataBase: new URL("https://www.shift-crew.com"),
+  title: {
+    default: "ShiftCrew – The Professional Network for Restaurant Workers",
+    template: "%s | ShiftCrew",
+  },
   description:
     "See what restaurant workers REALLY make. Verified pay, culture reviews, and W-2 career jobs. Built by crew, for crew.",
   keywords: [
@@ -38,10 +42,18 @@ export const metadata: Metadata = {
     "BOH jobs",
     "restaurant career",
     "shift work",
+    "restaurant hiring",
+    "service worker jobs",
+    "restaurant employment",
+    "hospitality careers",
+    "restaurant pay transparency",
   ],
-  authors: [{ name: "ShiftCrew" }],
+  authors: [{ name: "ShiftCrew", url: "https://www.shift-crew.com" }],
   creator: "ShiftCrew",
   publisher: "ShiftCrew",
+  alternates: {
+    canonical: "https://www.shift-crew.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,12 +62,22 @@ export const metadata: Metadata = {
     description:
       "See what restaurant workers REALLY make. Verified pay, culture reviews, and W-2 career jobs. Built by crew, for crew.",
     siteName: "ShiftCrew",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ShiftCrew - Built by crew, for crew",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ShiftCrew – The Professional Network for Restaurant Workers",
     description:
       "See what restaurant workers REALLY make. Verified pay, culture reviews, and W-2 career jobs.",
+    images: ["/logo.png"],
+    creator: "@shiftcrew",
   },
   robots: {
     index: true,
@@ -75,6 +97,10 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  verification: {
+    // Add Google Search Console verification when you have it
+    // google: "your-google-verification-code",
   },
 };
 
