@@ -7,8 +7,8 @@ export function Footer() {
         {/* About section - Simplified */}
         <AnimateOnScroll>
           <section className="text-left md:text-center">
-            <h3 className="text-lg font-bold uppercase tracking-wide text-neutral-900 md:text-xl">
-              ABOUT SHIFTCREW
+            <h3 className="text-lg font-bold tracking-wide text-neutral-900 md:text-xl">
+              About ShiftCrew
             </h3>
             <div className="mx-auto mt-6 max-w-2xl space-y-4 text-sm leading-relaxed text-neutral-600 md:mt-8 md:text-base">
               <p>
