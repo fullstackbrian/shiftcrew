@@ -17,7 +17,10 @@ export function Footer() {
               </p>
               <p>
                 Workers deserve to know what they&apos;re walking into: the culture,
-                the team, the real compensation. Restaurants deserve to know who they&apos;re hiring: the work ethic,
+                the team, the real compensation.
+              </p>
+              <p>
+                Restaurants deserve to know who they&apos;re hiring: the work ethic,
                 the reliability, the track record.
               </p>
               <p className="font-semibold text-neutral-900">
