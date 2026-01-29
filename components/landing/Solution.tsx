@@ -87,8 +87,13 @@ export function Solution() {
                       {title}
                     </h3>
 
+                    {/* Tagline - Prominent */}
+                    <p className="mt-4 text-lg font-semibold text-neutral-900">
+                      {tagline}
+                    </p>
+
                     {/* Description */}
-                    <p className="mt-4 text-lg font-medium text-neutral-700">
+                    <p className="mt-4 text-base text-neutral-600">
                       {description}
                     </p>
 
@@ -101,11 +106,6 @@ export function Solution() {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Tagline */}
-                    <p className="mt-8 border-t border-neutral-100 pt-6 text-sm italic text-neutral-500">
-                      {tagline}
-                    </p>
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
