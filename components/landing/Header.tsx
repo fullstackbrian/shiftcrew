@@ -1,17 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start">
-          <span className="font-heading text-xl font-bold text-green-600 leading-tight">
-            ShiftCrew
-          </span>
-          <span className="text-[10px] font-normal text-neutral-500 tracking-wider uppercase">
-            Built by crew, for crew
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="ShiftCrew - Built by crew, for crew"
+            width={140}
+            height={42}
+            className="h-auto w-auto"
+            priority
+          />
         </Link>
 
         {/* Navigation */}
