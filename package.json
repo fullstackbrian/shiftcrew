@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "tsx scripts/seed-data.ts",
+    "update-reviews": "tsx scripts/update-reviews-positive.ts",
     "migrations:combine": "node scripts/combine-migrations.js"
   },
   "dependencies": {
