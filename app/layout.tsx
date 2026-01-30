@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato, Roboto_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 // Headers: Playfair Display - Elegant serif for headers
@@ -115,6 +116,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${playfairDisplay.variable} ${lato.variable} ${robotoMono.variable} font-sans antialiased`}>
           {children}
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
