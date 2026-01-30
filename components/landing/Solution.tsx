@@ -18,7 +18,7 @@ const features = [
       "No more \"$25/hr!\" lies",
     ],
     tagline: "Stop applying blind. See real earnings first.",
-    borderColor: "border-t-green-500",
+    borderColor: "border-t-[#A52A2A]",
     Illustration: PayIllustration,
   },
   {
@@ -101,7 +101,7 @@ export function Solution() {
                     <ul className="mt-6 space-y-3">
                       {bullets.map((b) => (
                         <li key={b} className="flex items-start gap-3 text-base text-neutral-600">
-                          <Check className="mt-0.5 h-5 w-5 shrink-0 text-green-500" aria-hidden />
+                          <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#A52A2A]" aria-hidden />
                           <span>{b}</span>
                         </li>
                       ))}

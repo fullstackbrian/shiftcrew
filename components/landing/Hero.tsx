@@ -68,7 +68,7 @@ export function Hero() {
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star
                   key={i}
-                  className="h-4 w-4 fill-green-500 text-green-500"
+                  className="h-4 w-4 fill-[#A52A2A] text-[#A52A2A]"
                 />
               ))}
             </div>
