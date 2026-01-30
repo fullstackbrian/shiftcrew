@@ -6,6 +6,7 @@ import { JobCard } from "@/components/jobs/JobCard";
 import { FilterForm } from "./FilterForm";
 import { BrowseTabs } from "./BrowseTabs";
 import { Header } from "@/components/landing/Header";
+import { PreviewBanner } from "@/components/PreviewBanner";
 import { Button } from "@/components/ui/button";
 import { getSavedJobIds } from "@/app/actions/jobs";
 import { getCurrentUser } from "@/lib/clerk";
@@ -327,6 +328,7 @@ export default async function BrowsePage({
   return (
     <div className="min-h-screen bg-neutral-50">
       <Header />
+      <PreviewBanner />
       <div className="mx-auto w-full max-w-7xl px-6 py-12 md:px-8">
         <div className="mb-8">
           <h1 className="font-heading text-4xl font-bold text-neutral-900 md:text-5xl">

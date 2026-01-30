@@ -1,5 +1,6 @@
 import { StarRating } from "@/components/shared/StarRating";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import type { Review } from "@/lib/types";
 
 interface ReviewCardProps {
@@ -23,11 +24,18 @@ export function ReviewCard({ review }: ReviewCardProps) {
               {review.position} • {new Date(review.created_at).toLocaleDateString()}
             </p>
           </div>
-          {review.verified && (
-            <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">
-              Verified
-            </span>
-          )}
+          <div className="flex items-center gap-2">
+            {!review.verified && (
+              <Badge variant="outline" className="text-xs text-gray-500 border-gray-300">
+                Sample Data
+              </Badge>
+            )}
+            {review.verified && (
+              <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">
+                Verified
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-4">

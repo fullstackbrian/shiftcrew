@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentUser } from "@/lib/clerk";
 import { getSavedJobIds } from "@/app/actions/jobs";
 import { Header } from "@/components/landing/Header";
+import { PreviewBanner } from "@/components/PreviewBanner";
 import { CultureInsights } from "@/components/shared/CultureInsights";
 import { ReviewCard } from "@/components/reviews/ReviewCard";
 import { SaveJobButton } from "@/components/jobs/SaveJobButton";
@@ -188,6 +189,7 @@ export default async function JobDetailPage({
   return (
     <div className="min-h-screen bg-neutral-50">
       <Header />
+      <PreviewBanner />
       <div className="mx-auto w-full max-w-5xl px-6 py-12 md:px-8">
         {/* Job Header */}
         <div className="mb-8 rounded-lg border border-neutral-200 bg-white p-8 shadow-sm">

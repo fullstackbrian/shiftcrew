@@ -27,8 +27,8 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.shift-crew.com"),
   title: {
-    default: "SC",
-    template: "%s | SC",
+    default: "ShiftCrew",
+    template: "%s | ShiftCrew",
   },
   description:
     "See what restaurant workers REALLY make. Verified pay, culture reviews, and W-2 career jobs. Built by crew, for crew.",

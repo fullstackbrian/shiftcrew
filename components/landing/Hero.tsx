@@ -29,7 +29,7 @@ export function Hero() {
         {/* Subheadline */}
         <AnimateOnScroll delay={100}>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600 md:mt-8 md:text-xl">
-            See verified pay and honest culture reviews from workers at that location—before you apply.
+            See pay insights and honest culture reviews from workers at that location—before you apply.
           </p>
         </AnimateOnScroll>
 
@@ -73,8 +73,7 @@ export function Hero() {
               ))}
             </div>
             <p className="text-sm text-neutral-600">
-              <span className="font-nums font-semibold text-neutral-900">500+</span>{" "}
-              restaurant workers already joined
+              Early preview • Real reviews and job postings coming soon
             </p>
           </div>
         </AnimateOnScroll>

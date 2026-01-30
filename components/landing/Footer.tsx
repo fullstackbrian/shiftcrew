@@ -1,4 +1,5 @@
 import { AnimateOnScroll } from "./AnimateOnScroll";
+import Link from "next/link";
 
 export function Footer() {
   return (

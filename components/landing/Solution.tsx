@@ -9,10 +9,10 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const features = [
   {
-    title: "Verified Pay & Tips",
+    title: "Pay Insights & Tips",
     description: "Know what you'll actually make before you apply",
     bullets: [
-      "Base pay + tips verified by current workers",
+      "Base pay + tips insights from current workers",
       "Shift-by-shift breakdown (dinner service vs prep shift)",
       "See what you'll REALLY take home",
       "No more \"$25/hr!\" lies",
