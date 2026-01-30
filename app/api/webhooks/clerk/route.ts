@@ -69,7 +69,7 @@ export async function POST(req: Request) {
         clerk_user_id: id,
         email: email,
         name: name,
-        role: "worker", // Default to worker
+        role: null, // No role set initially - user must go through onboarding
       });
 
       if (error) {
