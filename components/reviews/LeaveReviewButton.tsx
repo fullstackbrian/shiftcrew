@@ -30,6 +30,7 @@ export function LeaveReviewButton({
         variant={variant}
         size={size}
         className={className}
+        aria-label="Leave a review for this restaurant"
       >
         <Link href={`/review/new?restaurant=${restaurantId}`}>
           Leave a Review
@@ -46,6 +47,8 @@ export function LeaveReviewButton({
         size={size}
         className={className}
         onClick={() => setShowSignupModal(true)}
+        aria-label="Sign up to leave a review"
+        title="Sign up to leave a review"
       >
         Leave a Review
       </Button>

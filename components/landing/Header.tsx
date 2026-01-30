@@ -108,7 +108,11 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-8 md:py-4">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start hover:opacity-80 transition-opacity">
+        <Link 
+          href="/" 
+          className="flex flex-col items-start hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm"
+          aria-label="ShiftCrew Home"
+        >
           <span className="font-heading text-2xl font-bold text-[#A52A2A] leading-tight">
             ShiftCrew
           </span>
@@ -123,7 +127,8 @@ export function Header() {
             {userRole === "worker" && (
               <Link
                 href="/browse"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+                aria-label="Browse restaurant jobs"
               >
                 Browse Jobs
               </Link>
@@ -131,14 +136,16 @@ export function Header() {
             {userRole === "employer" && (
               <Link
                 href="/employer/dashboard"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+                aria-label="Employer dashboard"
               >
                 Dashboard
               </Link>
             )}
             <Link
               href="/profile"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="View your profile"
             >
               Profile
             </Link>
@@ -146,15 +153,16 @@ export function Header() {
           <SignedOut>
             <Link
               href="/browse"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Browse restaurant jobs"
             >
               Browse Jobs
             </Link>
             <Button asChild variant="outline" size="sm">
-              <Link href="/sign-in">Sign In</Link>
+              <Link href="/sign-in" aria-label="Sign in to your account">Sign In</Link>
             </Button>
             <Button asChild size="sm">
-              <Link href="/sign-up">Sign Up</Link>
+              <Link href="/sign-up" aria-label="Create a new account">Sign Up</Link>
             </Button>
           </SignedOut>
           <SignedIn>
@@ -168,7 +176,8 @@ export function Header() {
             {userRole === "worker" && (
               <Link
                 href="/browse"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+                aria-label="Browse restaurant jobs"
               >
                 Browse
               </Link>
@@ -176,7 +185,8 @@ export function Header() {
             {userRole === "employer" && (
               <Link
                 href="/employer/dashboard"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+                aria-label="Employer dashboard"
               >
                 Dashboard
               </Link>
@@ -185,14 +195,15 @@ export function Header() {
           <SignedOut>
             <Link
               href="/browse"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Browse restaurant jobs"
             >
               Browse
             </Link>
           </SignedOut>
           <SignedOut>
             <Button asChild variant="ghost" size="sm">
-              <Link href="/sign-in">Sign In</Link>
+              <Link href="/sign-in" aria-label="Sign in to your account">Sign In</Link>
             </Button>
           </SignedOut>
           <SignedIn>

@@ -38,7 +38,8 @@ export function Footer() {
               Questions? You can email me at:{" "}
               <a
                 href="mailto:fullstackbrian@gmail.com"
-                className="font-semibold text-neutral-900 transition-colors hover:text-[#A52A2A]"
+                className="font-semibold text-neutral-900 transition-colors hover:text-[#A52A2A] focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm"
+                aria-label="Email ShiftCrew support"
               >
                 fullstackbrian@gmail.com
               </a>
@@ -48,17 +49,29 @@ export function Footer() {
 
         {/* Footer Links */}
         <AnimateOnScroll delay={200}>
-          <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-neutral-600">
-            <Link href="/terms" className="hover:text-neutral-900 transition-colors">
+          <nav className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-neutral-600" aria-label="Footer navigation">
+            <Link 
+              href="/terms" 
+              className="hover:text-neutral-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Terms of Service"
+            >
               Terms
             </Link>
-            <Link href="/privacy" className="hover:text-neutral-900 transition-colors">
+            <Link 
+              href="/privacy" 
+              className="hover:text-neutral-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Privacy Policy"
+            >
               Privacy
             </Link>
-            <a href="mailto:fullstackbrian@gmail.com" className="hover:text-neutral-900 transition-colors">
+            <a 
+              href="mailto:fullstackbrian@gmail.com" 
+              className="hover:text-neutral-900 transition-colors focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm px-1"
+              aria-label="Contact ShiftCrew"
+            >
               Contact
             </a>
-          </div>
+          </nav>
         </AnimateOnScroll>
 
         {/* Copyright */}

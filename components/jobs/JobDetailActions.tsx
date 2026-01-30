@@ -36,9 +36,11 @@ export function JobDetailActions({ job }: JobDetailActionsProps) {
         onClick={handleApply}
         size="lg"
         className="w-full md:w-auto"
+        aria-label={isSignedIn ? `Apply to ${job.title}` : "Sign up to apply"}
+        title={!isSignedIn ? "Sign up to apply to jobs" : `Apply to ${job.title}`}
       >
         Apply
-        <ExternalLink className="ml-2 h-4 w-4" />
+        <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
       </Button>
       <SignupPromptModal
         isOpen={showSignupModal}

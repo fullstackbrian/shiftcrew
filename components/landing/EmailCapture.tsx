@@ -101,13 +101,14 @@ export function EmailCapture() {
                 type="submit"
                 className="h-16 w-full rounded-xl bg-neutral-900 px-10 text-lg font-semibold text-white shadow-lg transition-all hover:bg-neutral-800 hover:shadow-xl disabled:opacity-50"
                 disabled={isPending}
+                aria-label={isPending ? "Joining waitlist..." : "Join the waitlist"}
               >
                 {isPending ? (
                   "Joining..."
                 ) : (
                   <>
                     Join waitlist
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                   </>
                 )}
               </Button>

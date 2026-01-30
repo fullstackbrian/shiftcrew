@@ -33,13 +33,18 @@ export function SignupPromptModal({ isOpen, onClose, message, action }: SignupPr
         </DialogHeader>
         <div className="flex flex-col gap-3 mt-4">
           <Button asChild size="lg" className="w-full">
-            <Link href="/sign-up" onClick={onClose}>
+            <Link href="/sign-up" onClick={onClose} aria-label="Sign up for a free account">
               Sign Up Free
             </Link>
           </Button>
           <p className="text-center text-sm text-neutral-500">
             Already have an account?{" "}
-            <Link href="/sign-in" className="text-[#A52A2A] hover:underline font-medium" onClick={onClose}>
+            <Link 
+              href="/sign-in" 
+              className="text-[#A52A2A] hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2 rounded-sm" 
+              onClick={onClose}
+              aria-label="Sign in to your account"
+            >
               Sign in
             </Link>
           </p>

@@ -128,10 +128,11 @@ export function JobCard({ job, isSaved = false, restaurantJobCount }: JobCardPro
                 e.stopPropagation();
                 router.push(`/restaurants/${restaurant.id}`);
               }}
-              className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium text-[#A52A2A] hover:text-[#8B0000] hover:bg-red-50/50 transition-all group/link border border-transparent hover:border-red-100"
+              className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium text-[#A52A2A] hover:text-[#8B0000] hover:bg-red-50/50 transition-all group/link border border-transparent hover:border-red-100 focus:outline-none focus:ring-2 focus:ring-[#A52A2A] focus:ring-offset-2"
+              aria-label={`View ${restaurantJobCount} ${restaurantJobCount === 1 ? 'job' : 'jobs'} at ${restaurant.name}`}
             >
-              <span>View {restaurantJobCount} {restaurantJobCount === 2 ? 'job' : 'jobs'} at {restaurant.name}</span>
-              <ArrowRight className="h-4 w-4 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
+              <span>View {restaurantJobCount} {restaurantJobCount === 1 ? 'job' : 'jobs'} at {restaurant.name}</span>
+              <ArrowRight className="h-4 w-4 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" aria-hidden="true" />
             </button>
           </div>
         )}

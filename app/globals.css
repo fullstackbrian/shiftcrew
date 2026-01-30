@@ -160,6 +160,18 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  /* Ensure all interactive elements have pointer cursor */
+  a, button, [role="button"], [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+  /* Disabled elements should not show pointer */
+  button:disabled, a[aria-disabled="true"], [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  /* Links should always be pointer */
+  a[href] {
+    cursor: pointer;
+  }
 }
 
 /* Use for pay amounts, ratings, stats - Roboto Mono only for numbers */

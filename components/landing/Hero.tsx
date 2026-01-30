@@ -40,6 +40,7 @@ export function Hero() {
               onClick={() => setShowPicker(true)}
               size="lg"
               className="h-14 bg-neutral-900 px-8 text-base font-semibold text-white shadow-lg transition-all hover:bg-neutral-800 hover:shadow-xl"
+              aria-label="Get started with ShiftCrew"
             >
               Get started
             </Button>
