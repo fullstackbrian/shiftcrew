@@ -1,21 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { UserTypePicker } from "./UserTypePicker";
 
 export function Hero() {
-  const [showPicker, setShowPicker] = useState(false);
-
   return (
     <section className="relative flex min-h-[85vh] items-center justify-center border-b border-neutral-200 bg-white px-6 py-20 md:px-8 md:py-32">
       <div className="mx-auto w-full max-w-4xl text-center">
@@ -33,34 +23,30 @@ export function Hero() {
           </p>
         </AnimateOnScroll>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <AnimateOnScroll delay={200}>
-          <div className="mx-auto mt-10 md:mt-12">
-            <Button
-              onClick={() => setShowPicker(true)}
-              size="lg"
-              className="h-14 bg-neutral-900 px-8 text-base font-semibold text-white shadow-lg transition-all hover:bg-neutral-800 hover:shadow-xl"
-              aria-label="Get started with ShiftCrew"
-            >
-              Get started
-            </Button>
+          <div className="mx-auto mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center md:mt-12">
+            <Link href="/sign-up">
+              <Button
+                size="lg"
+                className="h-14 w-full min-w-[160px] bg-[#A52A2A] px-8 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#8B0000] hover:shadow-xl sm:w-auto"
+                aria-label="Sign up for a free account"
+              >
+                Sign Up Free
+              </Button>
+            </Link>
+            <Link href="/browse">
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 w-full min-w-[160px] px-8 text-base font-semibold shadow-lg transition-all hover:shadow-xl sm:w-auto"
+                aria-label="Browse available jobs"
+              >
+                Browse Jobs
+              </Button>
+            </Link>
           </div>
         </AnimateOnScroll>
-
-        {/* User Type Picker Modal */}
-        <Dialog open={showPicker} onOpenChange={setShowPicker}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle className="text-center text-2xl">
-                I'm a...
-              </DialogTitle>
-              <DialogDescription className="text-center">
-                Choose how you want to use ShiftCrew
-              </DialogDescription>
-            </DialogHeader>
-            <UserTypePicker onClose={() => setShowPicker(false)} />
-          </DialogContent>
-        </Dialog>
 
         {/* Social Proof */}
         <AnimateOnScroll delay={300}>

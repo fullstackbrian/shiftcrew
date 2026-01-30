@@ -13,19 +13,8 @@ export function UserTypePicker({ onClose }: UserTypePickerProps) {
 
   const handleSelect = (userType: "worker" | "employer") => {
     onClose();
-    if (userType === "worker") {
-      // Scroll to worker waitlist section
-      setTimeout(() => {
-        const section = document.getElementById("waitlist");
-        section?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    } else {
-      // Scroll to employer section
-      setTimeout(() => {
-        const section = document.getElementById("for-employers");
-        section?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    }
+    // Navigate directly to sign-up page
+    router.push("/sign-up");
   };
 
   return (

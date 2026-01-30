@@ -1,3 +1,6 @@
+// DEPRECATED: Waitlist removed, users sign up directly via Clerk
+// This file is kept for reference but should not be used in the UI
+
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
