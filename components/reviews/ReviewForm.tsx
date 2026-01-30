@@ -30,7 +30,7 @@ const reviewSchema = z.object({
   rating_worklife: z.number().min(1).max(5),
   pros: z.string().optional(),
   cons: z.string().optional(),
-  is_anonymous: z.boolean().default(false),
+  is_anonymous: z.boolean(),
 });
 
 type ReviewFormData = z.infer<typeof reviewSchema>;
