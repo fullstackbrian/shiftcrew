@@ -15,6 +15,7 @@ CREATE INDEX IF NOT EXISTS idx_waitlist_created_at ON waitlist(created_at DESC);
 -- Option A: Enable RLS and allow insert for anon:
 ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Allow public insert on waitlist" ON waitlist;
 CREATE POLICY "Allow public insert on waitlist"
   ON waitlist
   FOR INSERT

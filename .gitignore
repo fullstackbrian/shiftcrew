@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# migrations
+supabase/combined-migration.sql
+
 # production
 /build
 

@@ -3,6 +3,7 @@
 drop policy if exists "Authenticated users can create restaurants" on restaurants;
 
 -- Allow anonymous inserts (Clerk handles authentication in the app layer)
+DROP POLICY IF EXISTS "Allow restaurant creation" ON restaurants;
 create policy "Allow restaurant creation" on restaurants
   for insert 
   to anon, authenticated

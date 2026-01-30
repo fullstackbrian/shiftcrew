@@ -94,43 +94,55 @@ alter table public.saved_jobs enable row level security;
 -- RLS Policies
 
 -- Users: Users can read their own data, update their own data, insert new users
+DROP POLICY IF EXISTS "Users can read their own data" ON users;
 create policy "Users can read their own data" on users
   for select using (true); -- Allow public read for now (can restrict later)
 
+DROP POLICY IF EXISTS "Users can insert their own data" ON users;
 create policy "Users can insert their own data" on users
   for insert with check (true); -- Allow inserts (will be validated by Clerk in application)
 
+DROP POLICY IF EXISTS "Users can update their own data" ON users;
 create policy "Users can update their own data" on users
   for update using (true); -- Will be restricted by Clerk user_id check in application
 
 -- Restaurants: Public read access
+DROP POLICY IF EXISTS "Public can read restaurants" ON restaurants;
 create policy "Public can read restaurants" on restaurants
   for select using (true);
 
 -- Jobs: Public read access
+DROP POLICY IF EXISTS "Public can read jobs" ON jobs;
 create policy "Public can read jobs" on jobs
   for select using (true);
 
 -- Reviews: Public read, authenticated users can insert
+DROP POLICY IF EXISTS "Public can read reviews" ON reviews;
 create policy "Public can read reviews" on reviews
   for select using (true);
 
+DROP POLICY IF EXISTS "Users can insert reviews" ON reviews;
 create policy "Users can insert reviews" on reviews
   for insert with check (true); -- Will be validated by Clerk auth in application
 
+DROP POLICY IF EXISTS "Users can update their own reviews" ON reviews;
 create policy "Users can update their own reviews" on reviews
   for update using (true); -- Will be validated by user_id check in application
 
+DROP POLICY IF EXISTS "Users can delete their own reviews" ON reviews;
 create policy "Users can delete their own reviews" on reviews
   for delete using (true); -- Will be validated by user_id check in application
 
 -- Saved jobs: Users can only access their own saved jobs
+DROP POLICY IF EXISTS "Users can read their own saved jobs" ON saved_jobs;
 create policy "Users can read their own saved jobs" on saved_jobs
   for select using (true); -- Will be filtered by user_id in application
 
+DROP POLICY IF EXISTS "Users can insert their own saved jobs" ON saved_jobs;
 create policy "Users can insert their own saved jobs" on saved_jobs
   for insert with check (true); -- Will be validated by user_id in application
 
+DROP POLICY IF EXISTS "Users can delete their own saved jobs" ON saved_jobs;
 create policy "Users can delete their own saved jobs" on saved_jobs
   for delete using (true); -- Will be validated by user_id in application
 
@@ -172,6 +184,7 @@ end;
 $$ language plpgsql;
 
 -- Trigger to update ratings when review is inserted/updated/deleted
+DROP TRIGGER IF EXISTS update_restaurant_ratings_on_review ON reviews;
 create trigger update_restaurant_ratings_on_review
   after insert or update or delete on reviews
   for each row
