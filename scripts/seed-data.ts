@@ -121,29 +121,37 @@ const payRanges = [
 ];
 
 const reviewPros = [
-  "Great tips, especially on weekends",
-  "Management is supportive and understanding",
-  "Team is like family, everyone helps each other",
-  "Good work-life balance, flexible scheduling",
-  "Free shift meals, quality food",
-  "Opportunity to learn from experienced chefs",
-  "Fast-paced but organized kitchen",
-  "Regulars are friendly and tip well",
-  "Clean kitchen, good safety standards",
-  "Opportunities for advancement",
+  "Amazing tips, especially on weekends - can make $300+ on a good night",
+  "Management is incredibly supportive and understanding",
+  "Team is like family, everyone helps each other out",
+  "Great work-life balance, very flexible scheduling",
+  "Free shift meals, and the food quality is excellent",
+  "Amazing opportunity to learn from world-class chefs",
+  "Fast-paced but well-organized kitchen",
+  "Regulars are super friendly and tip generously",
+  "Spotless kitchen, excellent safety standards",
+  "Clear opportunities for advancement and growth",
+  "Fun, energetic atmosphere - never a dull moment",
+  "Great benefits package including health insurance",
+  "Management really values employee feedback",
+  "Consistent schedule, reliable hours",
+  "Staff parties and team building events",
+  "Competitive pay with regular raises",
+  "Positive work culture, minimal drama",
+  "Good training program for new hires",
 ];
 
 const reviewCons = [
-  "Can get very busy, stressful during rush",
-  "Management sometimes cuts hours early",
-  "Some toxic coworkers, high turnover",
-  "Long hours, hard to get time off",
-  "No health insurance for part-time",
-  "Kitchen can be disorganized during peak times",
-  "Tips vary wildly day to day",
-  "Some customers can be difficult",
-  "Physical work, on your feet all shift",
-  "Not enough staff, often short-handed",
+  "Can get very busy during peak hours (but tips make it worth it)",
+  "Occasionally short-staffed on busy nights",
+  "Physical work - on your feet all shift",
+  "Tips can vary day to day (but weekends are great)",
+  "Some customers can be challenging (but most are great)",
+  "Fast-paced environment (good for those who like it busy)",
+  "Weekend shifts are mandatory (but that's when the money is)",
+  "Kitchen can get hot during summer months",
+  "Need to be flexible with schedule changes",
+  "Learning curve can be steep at first",
 ];
 
 async function seedRestaurants() {
@@ -246,10 +254,11 @@ async function seedReviews(restaurantIds: string[]) {
       usedUserIds.add(userId);
 
       const position = jobTitles[Math.floor(Math.random() * jobTitles.length)];
-      const ratingPay = Math.floor(Math.random() * 3) + 2; // 2-5
-      const ratingCulture = Math.floor(Math.random() * 3) + 2; // 2-5
-      const ratingManagement = Math.floor(Math.random() * 3) + 2; // 2-5
-      const ratingWorklife = Math.floor(Math.random() * 3) + 2; // 2-5
+      // More positive ratings: 3-5, weighted towards 4s and 5s
+      const ratingPay = Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 4 : 3; // 70% chance of 4-5, 30% chance of 3
+      const ratingCulture = Math.random() < 0.6 ? Math.floor(Math.random() * 2) + 4 : 3; // 60% chance of 4-5, 40% chance of 3
+      const ratingManagement = Math.random() < 0.65 ? Math.floor(Math.random() * 2) + 4 : 3; // 65% chance of 4-5, 35% chance of 3
+      const ratingWorklife = Math.random() < 0.6 ? Math.floor(Math.random() * 2) + 4 : 3; // 60% chance of 4-5, 40% chance of 3
 
       const pros = reviewPros[Math.floor(Math.random() * reviewPros.length)];
       const cons = reviewCons[Math.floor(Math.random() * reviewCons.length)];
