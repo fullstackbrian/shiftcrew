@@ -7,6 +7,7 @@ import { FilterForm } from "./FilterForm";
 import { BrowseTabs } from "./BrowseTabs";
 import { Header } from "@/components/landing/Header";
 import { PreviewBanner } from "@/components/PreviewBanner";
+import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { getSavedJobIds } from "@/app/actions/jobs";
 import { getCurrentUser } from "@/lib/clerk";
@@ -414,6 +415,7 @@ export default async function BrowsePage({
           }}
         </BrowseTabs>
       </div>
+      <Footer />
     </div>
   );
 }

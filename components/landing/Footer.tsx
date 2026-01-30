@@ -38,7 +38,7 @@ export function Footer() {
               Questions? You can email me at:{" "}
               <a
                 href="mailto:fullstackbrian@gmail.com"
-                className="font-semibold text-neutral-900 transition-colors hover:text-green-600"
+                className="font-semibold text-neutral-900 transition-colors hover:text-[#A52A2A]"
               >
                 fullstackbrian@gmail.com
               </a>
@@ -46,9 +46,24 @@ export function Footer() {
           </div>
         </AnimateOnScroll>
 
-        {/* Copyright */}
+        {/* Footer Links */}
         <AnimateOnScroll delay={200}>
-          <p className="mt-12 text-center text-base text-neutral-600 md:text-lg">
+          <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-neutral-600">
+            <Link href="/terms" className="hover:text-neutral-900 transition-colors">
+              Terms
+            </Link>
+            <Link href="/privacy" className="hover:text-neutral-900 transition-colors">
+              Privacy
+            </Link>
+            <a href="mailto:fullstackbrian@gmail.com" className="hover:text-neutral-900 transition-colors">
+              Contact
+            </a>
+          </div>
+        </AnimateOnScroll>
+
+        {/* Copyright */}
+        <AnimateOnScroll delay={300}>
+          <p className="mt-8 text-center text-base text-neutral-600 md:text-lg">
             © 2026 ShiftCrew.{" "}
             <span className="font-bold text-neutral-900">
               Built by crew, for crew.

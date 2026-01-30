@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { Header } from "@/components/landing/Header";
 import { PreviewBanner } from "@/components/PreviewBanner";
+import { Footer } from "@/components/landing/Footer";
 import { CultureInsights } from "@/components/shared/CultureInsights";
 import { ReviewCard } from "@/components/reviews/ReviewCard";
 import { JobCard } from "@/components/jobs/JobCard";
@@ -196,6 +197,7 @@ export default async function RestaurantPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

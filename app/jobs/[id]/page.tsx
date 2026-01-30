@@ -4,6 +4,7 @@ import { getCurrentUser } from "@/lib/clerk";
 import { getSavedJobIds } from "@/app/actions/jobs";
 import { Header } from "@/components/landing/Header";
 import { PreviewBanner } from "@/components/PreviewBanner";
+import { Footer } from "@/components/landing/Footer";
 import { CultureInsights } from "@/components/shared/CultureInsights";
 import { ReviewCard } from "@/components/reviews/ReviewCard";
 import { SaveJobButton } from "@/components/jobs/SaveJobButton";
@@ -294,6 +295,7 @@ export default async function JobDetailPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
