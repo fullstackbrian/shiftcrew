@@ -3,6 +3,11 @@ import { auth } from "@clerk/nextjs/server";
 import { createClient } from "@/lib/supabase/server";
 import { OnboardingClient } from "./OnboardingClient";
 
+export const metadata = {
+  title: "Get Started - Choose Your Role",
+  description: "Join ShiftCrew as a restaurant worker or employer. Get started by selecting your role.",
+};
+
 export default async function OnboardingPage() {
   const { userId } = await auth();
   

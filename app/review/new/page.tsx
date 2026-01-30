@@ -6,8 +6,8 @@ import { ReviewForm } from "@/components/reviews/ReviewForm";
 import type { Restaurant } from "@/lib/types";
 
 export const metadata = {
-  title: "Leave a Review",
-  description: "Share your experience working at a restaurant",
+  title: "Leave a Restaurant Review",
+  description: "Share your honest experience working at a restaurant. Rate pay, culture, management, and work-life balance to help other workers.",
 };
 
 async function getRestaurants() {

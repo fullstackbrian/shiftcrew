@@ -11,8 +11,8 @@ import Link from "next/link";
 import type { Job, Restaurant, Review } from "@/lib/types";
 
 export const metadata = {
-  title: "Profile",
-  description: "Your ShiftCrew profile",
+  title: "My Profile",
+  description: "View your saved jobs, reviews, and profile on ShiftCrew",
 };
 
 async function getSavedJobs(userId: string) {

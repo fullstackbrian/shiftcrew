@@ -28,9 +28,19 @@ export async function generateMetadata({
     };
   }
 
+  const location = restaurant.neighborhood ? ` in ${restaurant.neighborhood}, Los Angeles` : " in Los Angeles";
+  const ratingInfo = restaurant.rating_pay ? ` Rated ${restaurant.rating_pay}/5 for pay.` : "";
+  
   return {
-    title: `${restaurant.name} - Reviews & Jobs`,
-    description: `See reviews and job openings at ${restaurant.name}${restaurant.neighborhood ? ` in ${restaurant.neighborhood}` : ""}`,
+    title: `${restaurant.name}${location} - Reviews & Jobs`,
+    description: `See verified pay, culture reviews, and job openings at ${restaurant.name}${location}.${ratingInfo} Real reviews from workers who've worked there.`,
+    keywords: [
+      `${restaurant.name} reviews`,
+      `${restaurant.name} jobs`,
+      `restaurant reviews ${restaurant.neighborhood || "Los Angeles"}`,
+      "restaurant culture",
+      "verified pay",
+    ],
   };
 }
 

@@ -8,9 +8,21 @@ import { EmailCapture } from "@/components/landing/EmailCapture";
 import { Footer } from "@/components/landing/Footer";
 
 export const metadata = {
-  title: "Home",
+  title: "Find Restaurant Jobs with Real Pay Transparency",
   description:
-    "Find restaurant jobs with real transparency. See verified pay and honest culture reviews from workers at that location—before you apply.",
+    "Browse restaurant jobs in LA with verified pay and culture reviews from workers. Know what you'll make before you apply. For servers, bartenders, cooks, dishwashers, and all restaurant workers.",
+  keywords: [
+    "restaurant jobs",
+    "service industry jobs",
+    "restaurant worker jobs",
+    "verified pay",
+    "restaurant culture reviews",
+    "hospitality jobs",
+    "server jobs",
+    "bartender jobs",
+    "cook jobs",
+    "restaurant career",
+  ],
 };
 
 export default function Home() {

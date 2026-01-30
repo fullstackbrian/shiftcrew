@@ -34,9 +34,21 @@ export async function generateMetadata({
     };
   }
 
+  const restaurant = job.restaurant as Restaurant | null;
+  const payInfo = job.pay_range ? ` Pay: ${job.pay_range}.` : "";
+  const location = restaurant?.neighborhood ? ` in ${restaurant.neighborhood}, LA` : " in Los Angeles";
+  const restaurantName = restaurant?.name || "Restaurant";
+  
   return {
-    title: `${job.title} at ${job.restaurant.name}`,
-    description: job.description || `Apply for ${job.title} position at ${job.restaurant.name}`,
+    title: `${job.title} at ${restaurantName}${location}`,
+    description: `${job.title} position at ${restaurantName}${location}.${payInfo} See verified pay, culture reviews, and what workers really make. Apply now.`,
+    keywords: [
+      `${job.title} jobs`,
+      `${restaurantName} jobs`,
+      `restaurant jobs ${restaurant?.neighborhood || "Los Angeles"}`,
+      "verified pay",
+      "restaurant culture reviews",
+    ],
   };
 }
 

@@ -15,8 +15,18 @@ export const dynamic = "force-dynamic";
 export const revalidate = 30; // Revalidate every 30 seconds (good balance for job listings)
 
 export const metadata = {
-  title: "Browse Jobs",
-  description: "Browse restaurant jobs in Los Angeles with verified pay and culture reviews",
+  title: "Browse Restaurant Jobs - ShiftCrew",
+  description: "Browse 30+ LA restaurant jobs with verified pay ranges and culture reviews. See what workers really make before you apply. Find server, bartender, cook, and dishwasher jobs.",
+  keywords: [
+    "restaurant jobs Los Angeles",
+    "LA restaurant jobs",
+    "server jobs",
+    "bartender jobs",
+    "cook jobs",
+    "verified pay",
+    "restaurant culture reviews",
+    "hospitality jobs LA",
+  ],
 };
 
 // Cache key for memoization (in production, you'd use React Query or similar)
